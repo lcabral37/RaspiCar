@@ -1,0 +1,44 @@
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><a href="#" onclick="doCmd('forward'); return false;"><img src="images/forward.jpeg" /></a></td>
+        <td></td>
+        <td><a href="#" onclick="doCmd('play1'); return false;"><img src="images/play.jpeg" /></a></td>
+    </tr>
+    <tr>
+        <td><a href="#" onclick="doCmd('hardleft'); return false;"><img src="images/left.jpeg" /></a></td>
+        <td><a href="#" onclick="doCmd('left'); return false;"><img src="images/left.jpeg" /></a></td>
+        <td><a href="#" onclick="doCmd('stop'); return false;"><img src="images/stop.jpeg" /></a></td>
+        <td><a href="#" onclick="doCmd('right'); return false;"><img src="images/right.jpeg" /></a></td>
+        <td><a href="#" onclick="doCmd('hardright'); return false;"><img src="images/right.jpeg" /></a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><a href="#" onclick="doCmd('reverse'); return false;"><img src="images/reverse.jpeg" /></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+$(function() {
+    doCmd = function(cmd) {
+        var req = {
+            // url: cmd + '.py',
+            url: 'cmd.py?cmd=' + cmd,
+            success: function(data, status, xhr) {
+                console.log(data);
+            },
+            error: function() {
+                alert(cmd + ' was an error.');
+            }
+        };
+        $.ajax(req);
+    };
+});
+</script>
