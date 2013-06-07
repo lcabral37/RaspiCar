@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
-#GPIO.setwarnings(False)
+
+GPIO.setwarnings(False)
 
 from wcVariables import *
 
