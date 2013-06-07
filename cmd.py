@@ -8,8 +8,9 @@ cgitb.enable()
 form = cgi.FieldStorage()
 cmd  = form.getvalue("cmd", "(no cmd)")
 
-s.call("sudo /var/www/WC/" + cmd + ".py &",shell=True)
-
-
 print "Content-Type: text/html"
 print
+
+print "starting %s" % cmd
+s.call("sudo /var/www/WC/" + cmd + ".py &",shell=True)
+
