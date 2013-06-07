@@ -1,19 +1,15 @@
 #!/usr/bin/env python
+
+import subprocess as s
 import cgi
 import commands
 import cgitb
-# from subprocess import call
-# call([shell])
-
-
 cgitb.enable()
 form = cgi.FieldStorage()
 cmd  = form.getvalue("cmd", "(no cmd)")
 
-shell = "sudo /var/www/WC/" + cmd + ".py"
-status, output = commands.getstatusoutput(shell)
+s.call("sudo /var/www/WC/" + cmd + ".py &",shell=True)
 
 
 print "Content-Type: text/html"
 print
-print output
