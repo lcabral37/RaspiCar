@@ -8,5 +8,6 @@ GPIO_RIGHT_BACK     = 16
 
 # Define GPIO to use on Sonar
 
-GPIO_TRIGGER        = 18
-GPIO_ECHO           = 22
+GPIO_TRIGGER           = 18
+GPIO_ECHO              = 22
+SONAR_MINIMUM_DISTANCE = 10

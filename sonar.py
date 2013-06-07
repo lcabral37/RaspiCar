@@ -15,7 +15,7 @@ import RPi.GPIO as GPIO
 
 # Use BCM GPIO references
 # instead of physical pin numbers
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
 # Define GPIO to use on Pi
 GPIO_TRIGGER = 18
