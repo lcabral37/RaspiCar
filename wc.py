@@ -61,46 +61,46 @@ def right():
       backward()
 
 def lightRightForward():
-      GPIO.output(11, 1) 
-      GPIO.output(12, 0)
-      GPIO.output(15, 0)
-      GPIO.output(16, 0)
+      GPIO.output(GPIO_LEFT_FORWARD, 1) 
+      GPIO.output(GPIO_LEFT_BACK, 0)
+      GPIO.output(GPIO_RIGHT_FORWARD, 0)
+      GPIO.output(GPIO_RIGHT_BACK, 0)
 
 def lightRightBackward():
-      GPIO.output(11, 0)
-      GPIO.output(12, 0)
-      GPIO.output(15, 0)
-      GPIO.output(16, 1)
+      GPIO.output(GPIO_LEFT_FORWARD, 0)
+      GPIO.output(GPIO_LEFT_BACK, 0)
+      GPIO.output(GPIO_RIGHT_FORWARD, 0)
+      GPIO.output(GPIO_RIGHT_BACK, 1)
 
 def forward():
-      GPIO.output(11, 1)
-      GPIO.output(12, 0)
-      GPIO.output(15, 1)
-      GPIO.output(16, 0)
+      GPIO.output(GPIO_LEFT_FORWARD, 1)
+      GPIO.output(GPIO_LEFT_BACK, 0)
+      GPIO.output(GPIO_RIGHT_FORWARD, 1)
+      GPIO.output(GPIO_RIGHT_BACK, 0)
 
 def backward():
-      GPIO.output(11, 0)
-      GPIO.output(12, 1)
-      GPIO.output(15, 0)
-      GPIO.output(16, 1)
+      GPIO.output(GPIO_LEFT_FORWARD, 0)
+      GPIO.output(GPIO_LEFT_BACK, 1)
+      GPIO.output(GPIO_RIGHT_FORWARD, 0)
+      GPIO.output(GPIO_RIGHT_BACK, 1)
 
 def stop():
-      GPIO.output(11, 0)
-      GPIO.output(12, 0)
-      GPIO.output(15, 0)
-      GPIO.output(16, 0)
+      GPIO.output(GPIO_LEFT_FORWARD, 0)
+      GPIO.output(GPIO_LEFT_BACK, 0)
+      GPIO.output(GPIO_RIGHT_FORWARD, 0)
+      GPIO.output(GPIO_RIGHT_BACK, 0)
 
 def hardLeft():
-   GPIO.output(11, 0)
-   GPIO.output(12, 1)
-   GPIO.output(15, 1)
-   GPIO.output(16, 0)
+   GPIO.output(GPIO_LEFT_FORWARD, 0)
+   GPIO.output(GPIO_LEFT_BACK, 1)
+   GPIO.output(GPIO_RIGHT_FORWARD, 1)
+   GPIO.output(GPIO_RIGHT_BACK, 0)
 
 def hardRight():
-   GPIO.output(11, 1)
-   GPIO.output(12, 0)
-   GPIO.output(15, 0)
-   GPIO.output(16, 1)
+   GPIO.output(GPIO_LEFT_FORWARD, 1)
+   GPIO.output(GPIO_LEFT_BACK, 0)
+   GPIO.output(GPIO_RIGHT_FORWARD, 0)
+   GPIO.output(GPIO_RIGHT_BACK, 1)
 
 def getDistance():
    # Allow module to settle
