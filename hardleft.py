@@ -5,5 +5,5 @@ from wc import *
 initialize()
 stop()
 hardLeft()
-time.sleep(2)
+time.sleep(TURN_TIME)
 stop()

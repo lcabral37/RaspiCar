@@ -52,11 +52,11 @@ def left():
 def right():
    if isForward():
       lightRightForward()
-      time.sleep(2)
+      time.sleep(TURN_TIME)
       forward()
    else:
       lightRightBackward()
-      time.sleep(2)
+      time.sleep(TURN_TIME)
       backward()
 
 def lightRightForward():
