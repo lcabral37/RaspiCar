@@ -28,6 +28,16 @@ def isForward():
    GPIO.setup(GPIO_LEFT_BACK, GPIO.OUT)
    return not isbackward
 
+def isMoving():
+   GPIO.setup(GPIO_LEFT_FORWARD, GPIO.IN)
+   isforward = GPIO.input(GPIO_LEFT_FORWARD)
+   GPIO.setup(GPIO_LEFT_FORWARD, GPIO.OUT)
+
+   GPIO.setup(GPIO_LEFT_BACK, GPIO.IN)
+   isbackward = GPIO.input(GPIO_LEFT_BACK)
+   GPIO.setup(GPIO_LEFT_BACK, GPIO.OUT)
+   return isforward or isbackward
+
 def left():
    if isForward():
       GPIO.output(GPIO_LEFT_FORWARD, 0)

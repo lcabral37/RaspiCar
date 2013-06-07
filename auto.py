@@ -11,6 +11,8 @@ while True:
     distance = getDistance()
     print "distance = %s" % distance 
 
+    ismoving = isMoving()
+
     if distance < SONAR_MINIMUM_DISTANCE:
         if lastDistance < SONAR_MINIMUM_DISTANCE:
             print "rotating right "
@@ -18,7 +20,11 @@ while True:
             time.sleep(LOOK_SMART_TIME)
             hardRight()
             time.sleep(TURN_TIME)
-            forward()
+            stop()
+            time.sleep(LOOK_SMART_TIME)
+            if ismoving:
+                print "Proceeding forward"
+                forward()
 
     lastDistance = distance
     time.sleep(SONAR_AUTO_TIME)

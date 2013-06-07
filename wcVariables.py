@@ -9,7 +9,7 @@ GPIO_RIGHT_BACK     = 16
 
 GPIO_TRIGGER           = 18
 GPIO_ECHO              = 22
-SONAR_MINIMUM_DISTANCE = 30
+SONAR_MINIMUM_DISTANCE = 20
 
 
 #define times for actions
