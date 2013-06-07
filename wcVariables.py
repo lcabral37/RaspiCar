@@ -15,5 +15,5 @@ SONAR_MINIMUM_DISTANCE = 30
 
 #define times for actions
 TURN_TIME       = 3
-SONAR_AUTO_TIME = 0.3
+SONAR_AUTO_TIME = 0.2
 LOOK_SMART_TIME = 1
