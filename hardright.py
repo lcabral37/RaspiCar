@@ -23,7 +23,7 @@ if isforward:
    GPIO.output(12, 0)
    GPIO.output(15, 0)
    GPIO.output(16, 1)
-   sleep(2)
+   time.sleep(2)
    GPIO.output(11, 0) 
    GPIO.output(12, 0)
    GPIO.output(15, 0)
@@ -38,8 +38,7 @@ else:
    GPIO.output(12, 1)
    GPIO.output(15, 1)
    GPIO.output(16, 0)
-
-   sleep(2)
+   time.sleep(2)
    GPIO.output(11, 0) 
    GPIO.output(12, 0)
    GPIO.output(15, 0)
